@@ -1,0 +1,9 @@
+{
+  "listen_conf": {
+    "http_addr": "0.0.0.0",
+    "http_port": 8080,
+    "enable_admin": true,
+    "admin_addr": "0.0.0.0",
+    "admin_port": 8088
+  }
+}
