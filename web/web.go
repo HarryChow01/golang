@@ -39,8 +39,5 @@ func initConfig() {
 	web.BConfig.Listen.AdminPort = beegoConfig.ListenConf.AdminPort
 	fmt.Println("web.BConfig.Listen", web.BConfig.Listen)
 
-	web.Router("/ping", new(pingController))
 	web.Router("/test_post", new(testController))
 }
-
-
