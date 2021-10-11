@@ -5,13 +5,13 @@ import (
 	"fmt"
 )
 
-//go:embed web/config.json
+//go:embed myweb/config.json
 var s string
 
-//go:embed web/config.json
+//go:embed myweb/config.json
 var b []byte
 
-//go:embed web/config.json
+//go:embed myweb/config.json
 var fs embed.FS
 func main() {
 	fmt.Println(s)
