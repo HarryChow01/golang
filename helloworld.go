@@ -1,7 +1,10 @@
 
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "reflect"
+)
 
 func fun1() {
     sum := 0
@@ -19,9 +22,14 @@ func fun2() {
     fmt.Println("sum:", sum)
 }
 
+func fun3() {
+    arr := []int64{}
+    // arr = append(arr, 5)
+    fmt.Printf(reflect.TypeOf(arr))
+    fmt.Printf("len(arr): %+v", len(arr))
+}
 
 func main() {
     fmt.Println("Hello, world")
-    fun2()
+    fun3()
 }
-

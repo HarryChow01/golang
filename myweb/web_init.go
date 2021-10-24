@@ -1,4 +1,4 @@
-package web
+package myweb
 
 import (
 	_ "embed"
@@ -22,7 +22,7 @@ type ListenConfig struct {
 	AdminPort   int    `json:"admin_port"`
 }
 
-func initConfig() {
+func InitConfig() {
 	beegoConfig := new(BeegoConfig)
 	fmt.Println("listenConfig", beegoConfig)
 	json.Unmarshal(configFile, beegoConfig)
@@ -37,7 +37,7 @@ func initConfig() {
 	web.BConfig.Listen.EnableAdmin = beegoConfig.ListenConf.EnableAdmin
 	web.BConfig.Listen.AdminAddr = beegoConfig.ListenConf.AdminAddr
 	web.BConfig.Listen.AdminPort = beegoConfig.ListenConf.AdminPort
-	fmt.Println("web.BConfig.Listen", web.BConfig.Listen)
+	fmt.Println("myweb.BConfig.Listen", web.BConfig.Listen)
 
 	web.Router("/test_post", new(testController))
 }
