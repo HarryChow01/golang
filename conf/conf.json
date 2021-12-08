@@ -1,0 +1,8 @@
+{
+  "holo_host": "127.0.0.1",
+  "holo_port": 80,
+  "holo_user": "user",
+  "holo_password": "password",
+  "holo_dbname": "db1",
+  "extra_test": "extra_test"
+}

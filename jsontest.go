@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"os"
 )
 
 type Student struct {
@@ -34,7 +36,38 @@ func jsonTest1() {
 	fmt.Println("student2:", student2)
 }
 
+type HoloConfig struct {
+	HoloHost     string `json:"holo_host"`
+	HoloPort     int16  `json:"holo_port"`
+	HoloUser string `json:"holo_user"`
+	HoloPassword string `json:"holo_password"`
+	HoloDBName   string `json:"holo_dbname"`
+}
+
+func loadJsonFile(filePath string) []byte {
+	fmt.Printf("filePath: %s\n", filePath)
+	file, err := os.Open(filePath)
+	if err != nil {
+		panic(err)
+	}
+	defer file.Close()
+	content, err := ioutil.ReadAll(file)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("content: %s\n", string(content))
+	return content
+}
+
 
 func main() {
-	jsonTest1()
+	filePath := "conf/conf.json"
+	fileContent := loadJsonFile(filePath)
+
+	holoConfig := HoloConfig{}
+	err := json.Unmarshal(fileContent, &holoConfig)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("holoConfig: %+v\n", holoConfig)
 }
