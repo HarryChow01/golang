@@ -1,8 +1,11 @@
-package main
+package test
 
-import "fmt"
+import (
+    "fmt"
+    "testing"
+)
 
-func ArrayTest() {
+func TestArray1(t *testing.T) {
     arr := []int64{}
     // var arr []int64
     // arr = append(arr, 5)

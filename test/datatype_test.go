@@ -1,27 +1,19 @@
-
-package main
+package test
 
 import (
     "fmt"
+    "testing"
     "unsafe"
 )
 
-func main() {
-    // test_int()
-    // test_float()
-    // test_bool()
-    // test_addr()
-    test_data()
-}
-
-func test_int() {
+func TestInt1(t *testing.T) {
     var age1 int = 18
     var age2 int32
     var age3 = 0B1010
     fmt.Printf("age1: %d, age2: %d, age3: %d\n", age1, age2, age3)
-    
+
     fmt.Println(unsafe.Sizeof(age3))
-    
+
     var i1 int = 1
     var i2 int8 = 2
     var i3 int16 = 3
@@ -34,7 +26,7 @@ func test_int() {
     fmt.Println(unsafe.Sizeof(i5))
 }
 
-func test_float() {
+func TestFloat1(t *testing.T) {
     var f1 float32 = 1.1
     var f2 float64 = 1.2
     var f3 = 1.3
@@ -43,17 +35,17 @@ func test_float() {
     fmt.Println(unsafe.Sizeof(f3))
 }
 
-func test_bool() {
+func TestBool1(t *testing.T) {
     var xx = true
     var yy = false
     fmt.Println(unsafe.Sizeof(xx))
     fmt.Println(unsafe.Sizeof(yy))
 }
 
-func test_addr() {
-    var a int = 10  
+func TestAddr1(t *testing.T) {
+    var a int = 10
     fmt.Printf("address of a: %x\n", &a)
-    
+
     var ptr *int
     fmt.Printf("ptr : %x\n", ptr)
     // var ip *int        /* 指向整型*/
@@ -62,7 +54,7 @@ func test_addr() {
     // if(ptr == nil)    /* ptr is not null */
 }
 
-func test_data() {
+func TestData1(t *testing.T) {
     var x uint8 = 1<<1 | 1<<5
     var y uint8 = 1<<1 | 1<<2
 
@@ -83,27 +75,3 @@ func test_data() {
     fmt.Printf("%08b\n", x<<1) // "01000100", the set {2, 6}
     fmt.Printf("%08b\n", x>>1) // "00010001", the set {0, 4}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

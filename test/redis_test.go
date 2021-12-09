@@ -1,13 +1,13 @@
-
-package main
+package test
 
 import (
     "fmt"
     "path"
     "runtime"
+    "testing"
 )
 
-func getCurrentAbPathByCaller() string {
+func TestCurrentAbPathByCaller(t *testing.T) {
     var abPath string
     _, filename, _, ok := runtime.Caller(0)
     fmt.Printf("cur file: %s\n", filename)
@@ -15,16 +15,4 @@ func getCurrentAbPathByCaller() string {
         abPath = path.Dir(filename)
     }
     fmt.Printf("absolute path: %s\n", abPath)
-    return abPath
-}
-
-
-func redisTest1() {
-
-}
-
-
-func main() {
-    fmt.Println("start:")
-    getCurrentAbPathByCaller()
 }
