@@ -24,7 +24,7 @@ func testPointer2(intValue *int32) {
     fmt.Printf("func intValue: %v\n", *intValue)
 }
 
-func main() {
+func Test222(t *testing.T) {
     // ArrayTest()
     var intValue int32 = 10
     fmt.Printf("main intValue: %v\n", intValue)
