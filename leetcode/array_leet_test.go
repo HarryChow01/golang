@@ -32,3 +32,27 @@ func TestGetFirstIndexArray(t *testing.T) {
 	index, ok = GetFirstIndexArray1(data)
 	fmt.Printf("ok: %t, index: %d\n", ok, index)
 }
+
+// 给定两个由小到大有序int型数组，返回1个归并后由小到大有序的int型数组
+func merge(a, b []int) []int {
+	i, j := 0, 0
+	var res []int
+	for {
+		if a[i] < b[j] {
+			res = append(res, a[i])
+			i++
+		} else {
+			res = append(res, b[j])
+			j++
+		}
+		if i == len(a) || j == len(b) {
+			break
+		}
+	}
+	if i == len(a) {
+		res = append(res, b[j:]...)
+	} else {
+		res = append(res, a[i:]...)
+	}
+	return res
+}
