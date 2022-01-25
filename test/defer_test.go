@@ -15,6 +15,7 @@ func testHelper1() bool {
 	defer fmt.Println("in defer testHelper1")
 	fmt.Println("test testHelper1")
 	return testHelper3()
+
 }
 
 func testHelper2() {
