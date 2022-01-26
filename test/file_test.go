@@ -15,7 +15,6 @@ func TestRead1(t *testing.T) {
 	defer file.Close()
 	content, _ := ioutil.ReadAll(file)
 	fmt.Println(string(content))
-
 }
 
 func TestRead2(t *testing.T) {
