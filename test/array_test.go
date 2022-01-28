@@ -6,10 +6,14 @@ import (
 )
 
 func TestArray1(t *testing.T) {
-    arr := []int64{}
-    // var arr []int64
-    // arr = append(arr, 5)
-    fmt.Printf("len(arr): %+v", len(arr))
+    var arr1 [12]int
+    for index, value := range arr1 {
+        fmt.Printf("index: %+v, value: %+v\n", index, value)
+    }
+    arr2 := [12]int{10, 20, 30}
+    for index, value := range arr2 {
+        fmt.Printf("index: %+v, value: %+v\n", index, value)
+    }
 }
 
 func testPointer1(intValue int32) {

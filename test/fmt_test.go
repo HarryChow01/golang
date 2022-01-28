@@ -65,3 +65,8 @@ func TestGeneralFmt1(t *testing.T) {
 	fmt.Printf("%s\n", reflect.TypeOf(v2).Name())
 	fmt.Printf("%s\n", reflect.TypeOf(v2).Kind())
 }
+
+func TestVar1(t *testing.T) {
+	var aa int = 10
+	fmt.Printf("aa: %+v\n", aa)
+}

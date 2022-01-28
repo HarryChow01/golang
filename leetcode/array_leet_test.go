@@ -22,6 +22,7 @@ func GetFirstIndexArray1(data []int) (int, bool) {
 }
 
 func TestGetFirstIndexArray(t *testing.T) {
+	// 切片
 	data := []int{1, 2, 3, 1, 2}
 	index, ok := GetFirstIndexArray1(data)
 	fmt.Printf("ok: %t, index: %d\n", ok, index)
