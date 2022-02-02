@@ -5,27 +5,6 @@ import (
 	"testing"
 )
 
-func TestString1(t *testing.T) {
-	s1 := "abc"
-	ch := s1[0]
-
-	fmt.Printf("type of s1: %T\n", s1)
-	fmt.Printf("type of ch: %T\n", ch)
-
-	fmt.Printf("ch: %d\n", ch)
-	fmt.Printf("ch: %q\n", ch)
-}
-
-func TestForLoop1(t *testing.T) {
-	charCount := [26]int{0}
-	for index, item := range charCount {
-		fmt.Printf("type of index: %T\n", index)
-		fmt.Printf("index: %d\n", index)
-		fmt.Printf("type of item: %T\n", item)
-		fmt.Printf("item: %d\n", item)
-	}
-}
-
 func GetFirstIndex1(str string) (int, bool) {
 	if str == "" {
 		return -1, true
