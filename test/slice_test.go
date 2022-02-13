@@ -17,3 +17,16 @@ func TestSlice1(t *testing.T) {
 	fmt.Println(cap(Q2))
 }
 
+func TestSliceCopy1(t *testing.T) {
+	data1 := []int{1, 2, 3, 4, 5, 6, 7}
+	var data2 []int;
+	fmt.Println(data2)
+	copy(data2, data1)
+	fmt.Println(data2)
+
+	data3 := make([]int, len(data1))
+	fmt.Println(data3)
+	copy(data3, data1)
+	fmt.Println(data3)
+
+}
