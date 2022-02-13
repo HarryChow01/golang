@@ -10,7 +10,7 @@ func TestGoroutine1(t *testing.T) {
 	go spinner(100 * time.Millisecond)
 	const n = 45
 	fibN := fib(n) // slow
-	fmt.Printf("\rFibonacci(%d) = %d\n", n, fibN)
+	t.Logf("\rFibonacci(%d) = %d\n", n, fibN)
 }
 
 func spinner(delay time.Duration) {
