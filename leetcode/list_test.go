@@ -59,7 +59,7 @@ func findLastK(list *ListNode, K int) *ListNode {
 func TestList1(t *testing.T) {
 	list1 := createList(6)
 	printList(list1)
-	p := findLastK(list1, 7)
+	p := findLastK(list1, 2)
 	if p == nil {
 		t.Log("p == nil")
 	} else {

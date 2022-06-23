@@ -12,8 +12,8 @@ import (
 type Lru struct {
 	max      int
 	dataList *list.List
-	dataMap map[interface{}]*list.Element
-	rwLock  sync.RWMutex
+	dataMap  map[interface{}]*list.Element
+	rwLock   sync.RWMutex
 }
 
 type node struct {

@@ -4,8 +4,8 @@ import "testing"
 
 func heapAdjust(data []int, s int, m int) {
 	pivot := data[s]
-	for j := 2 * s + 1; j <= m; j = 2 * s + 1 {
-		if j < m && data[j] < data[j + 1] {
+	for j := 2*s + 1; j <= m; j = 2*s + 1 {
+		if j < m && data[j] < data[j+1] {
 			j++
 		}
 		if pivot >= data[j] {
@@ -19,11 +19,12 @@ func heapAdjust(data []int, s int, m int) {
 
 func HeapSort(data []int) {
 	for i := len(data) / 2; i >= 0; i-- {
-		heapAdjust(data, i, len(data) - 1)
+		heapAdjust(data, i, len(data)-1)
 	}
 	for i := len(data) - 1; i > 0; i-- {
 		data[0], data[i] = data[i], data[0]
-		heapAdjust(data, 0, i - 1)
+		heapAdjust(data, 0, i-1)
+
 	}
 }
 
