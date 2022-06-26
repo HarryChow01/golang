@@ -8,7 +8,7 @@ import (
 func TestArray1(t *testing.T) {
 	// 声明数组，不提供显式初始化
 	var arr1 [5]int // 数组声明即定义，自动分配内存并初始化
-	// fmt.Printf("m1 == nil: %t\n", arr1 == nil), error: 不能和nil比较
+	// fmt.Printf("arr1 == nil: %t\n", arr1 == nil), error: 不能和nil比较
 	fmt.Printf("len(arr1): %d\n", len(arr1)) // 数组声明即定义，自动分配内存并初始化
 	fmt.Println(arr1)
 
@@ -31,6 +31,18 @@ func TestArray1(t *testing.T) {
 	}
 }
 
+func TestArray2(t *testing.T) {
+	var arr1 = [5]int{1, 2, 3, 4, 5}
+	var arr2 = [...]int{1, 2, 3, 4, 5}
+	// var arr3 = [3]int{1, 2, 3}
+	// fmt.Println("arr1 == arr3: ", arr1 == arr3)	// error，类型不同不能比较；
+
+	fmt.Println("arr1 == arr2: ", arr1 == arr2)
+	fmt.Println("arr1 != arr2: ", arr1 != arr2)
+
+	// fmt.Println("arr1 < arr2: ", arr1 < arr2)  // error，不支持<和>比较；
+}
+
 type Currency int
 
 const (
@@ -40,9 +52,8 @@ const (
 	RMB                 // 人民币
 )
 
-func TestArray2(t *testing.T) {
+func TestArray3(t *testing.T) {
 	symbol := [...]string{USD: "$", EUR: "€", GBP: "￡", RMB: "￥"}
-
 	fmt.Println(RMB, symbol[RMB]) // "3 ￥"
 }
 
