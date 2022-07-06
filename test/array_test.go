@@ -43,6 +43,15 @@ func TestArray2(t *testing.T) {
 	// fmt.Println("arr1 < arr2: ", arr1 < arr2)  // error，不支持<和>比较；
 }
 
+func TestArray3(t *testing.T) {
+	arr := [3][4]int{
+		{0, 1, 2, 3},   /*  第一行索引为 0 */
+		{4, 5, 6, 7},   /*  第二行索引为 1 */
+		{8, 9, 10, 11}, /* 第三行索引为 2 */
+	}
+	fmt.Println(arr)
+}
+
 type Currency int
 
 const (
@@ -52,7 +61,7 @@ const (
 	RMB                 // 人民币
 )
 
-func TestArray3(t *testing.T) {
+func TestArray8(t *testing.T) {
 	symbol := [...]string{USD: "$", EUR: "€", GBP: "￡", RMB: "￥"}
 	fmt.Println(RMB, symbol[RMB]) // "3 ￥"
 }

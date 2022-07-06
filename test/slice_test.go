@@ -18,6 +18,19 @@ func TestSlice1(t *testing.T) {
 
 }
 
+// 二维切片
+func TestSlice2(t *testing.T) {
+	//声明一个二维切片
+	var s1 [][]int
+	fmt.Printf("s1 == nil: %t\n", s1 == nil)
+	fmt.Println("s1 = ", s1)
+
+	//为二维切片赋值
+	s2 := [][]int{{10}, {100, 200}}
+	fmt.Printf("s2 == nil: %t\n", s2 == nil)
+	fmt.Println("s2 = ", s2)
+}
+
 func TestSlice5(t *testing.T) {
 	months := [...]string{1: "January", 2: "February", 3: "March", 4: "April",
 		5: "May", 6: "June", 7: "July", 8: "August",
