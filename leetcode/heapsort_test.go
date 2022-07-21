@@ -24,7 +24,6 @@ func HeapSort(data []int) {
 	for i := len(data) - 1; i > 0; i-- {
 		data[0], data[i] = data[i], data[0]
 		heapAdjust(data, 0, i-1)
-
 	}
 }
 

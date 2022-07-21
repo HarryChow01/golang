@@ -114,6 +114,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 
 func TestDeleteDuplicates(t *testing.T) {
 	// s1 := []int{1, 2, 3, 3, 4, 4, 5}
+	// s2 := []int{1, 1, 1, 2, 3}
 	s1 := []int{1, 2, 2}
 	list1 := CreateList2(s1)
 	printList(list1)
